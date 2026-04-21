@@ -1,0 +1,11 @@
+zone "l2-5.ephec-ti.be" {
+    type master;
+    file "/var/lib/bind/ma-zone.zone"; 
+    
+    dnssec-policy default;
+    inline-signing yes;
+
+    allow-transfer { 91.134.137.235; 91.134.137.136; };
+    also-notify { 91.134.137.235; 91.134.137.136; };
+    notify yes;
+};

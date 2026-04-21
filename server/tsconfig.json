@@ -1,0 +1,16 @@
+{
+"compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "target": "ESNext",
+    "module": "NodeNext",           
+    "moduleResolution": "NodeNext", 
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": false,
+    "strict": false 
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/tests/**/*", "**/*.test.ts"]
+}

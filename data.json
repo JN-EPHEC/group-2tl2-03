@@ -1,0 +1,16 @@
+{
+  "customer": {
+    "firstName": "Neo",
+    "lastName": "Anderson",
+    "email": "neo@matrix.com",
+    "phone": "0470123456",
+    "address": "Avenue de l'Ephec, 1200 Bruxelles"
+  },
+  "product": {
+    "name": "Figurine Woodytoys",
+    "price": 25,
+    "stock": 50
+  },
+  "quantity": 2,
+  "discountCode": "PROMO10"
+}

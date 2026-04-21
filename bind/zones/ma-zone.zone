@@ -1,0 +1,35 @@
+$TTL 300
+$ORIGIN l2-5.ephec-ti.be.
+@   IN  SOA ns3.l2-5.ephec-ti.be. admin.l2-5.ephec-ti.be. (
+            2026041021 ; Serial 
+            14400       ; Refresh
+            3600       ; Retry
+            1209600     ; Expire
+            300 )    ; Minimum TTL
+
+; Serveur de nom faisant autorité
+;@       IN  NS   ns1.l2-5.ephec-ti.be.
+@       IN  NS   ns2.l2-5.ephec-ti.be.
+@       IN  NS   ns3.l2-5.ephec-ti.be.
+
+; Enregistrements A 
+ns1     IN  A    91.134.137.235
+ns2     IN  A    91.134.137.136
+ns3     IN  A    91.134.138.187
+www     IN  A    91.134.138.187
+mail    IN    A    91.134.138.187
+
+blog    IN  CNAME  www
+l2-5.ephec-ti.be.    IN    MX    10 mail.l2-5.ephec-ti.be.
+@               IN  MX 10  mail.l2-5.ephec-ti.be.
+@ IN TXT "v=spf1 mx ip4:91.134.138.187 -all"
+_dmarc IN TXT "v=DMARC1; p=none; adkim=s; aspf=s; rua=mailto:admin@l2-5.ephec-ti.be"
+mail._domainkey IN TXT ( "v=DKIM1; h=sha256; k=rsa; "
+  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkclQhrPxgAV5PQjo"
+  "4qVvrmoVT1DkUkzqRX+2oRi7UxYQ7xEr+iG5z/sRPgBB9Rf7lIG/Zay4wCBNz"
+  "5wbHpWeWDFopOk5ki3jHaoiDerdeWktoTGXRN0zSSa/AJYzCf29dbdqwcJhOp"
+  "06KthhwS+gCT9nCHDm1yrp5KNpYYVWNfY1Xn0kXkBS5DPOl49FQKWdxm8FS5r"
+  "17076yjA92QnhJPSv1lK9to9EtmRelXt1fq/2D+cTcGZZRptY7wizYDka0NCl"
+  "eyOJUK98y7CNHlXt13zz5VLxrDQYEy7T6v17Y+3oQj2FiMFwWY9gfV9MpDE3P"
+  "gZv/WZaX3iQ6ymsyaQDzQIDAQAB" )
+

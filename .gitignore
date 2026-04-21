@@ -1,0 +1,58 @@
+# --- Système ---
+.DS_Store
+Thumbs.db
+__pycache__/
+
+# --- DNS (Bind) ---
+bind/zones/*.jnl
+bind/zones/*.signed
+bind/zones/*.state
+bind/zones/*.private
+
+# --- Sécurité & Secrets ---
+.env
+mailserver.env
+letsencrypt/
+certs/
+*.pem
+config/opendkim/keys/
+
+# --- Volumes Docker (Données persistantes) ---
+mail/docker-data/
+mail/state/
+db_data/
+mysql/
+redis/
+
+# --- Divers ---
+*.log
+tmp/
+# Secrets et environnement
+db.env
+*.env
+bind/config/rndc.key
+
+# Clés DNSSEC (On ne garde que le nécessaire, pas les .private)
+bind/zones/*.private
+bind/zones/*.key
+
+# --- Données et Backups ---
+# On NE bloque PAS le dossier db/ pour garder les scripts SQL
+# Mais on bloque le dossier où MariaDB stocke ses données réelles
+db_data/ 
+mysql/
+backups/
+*.sql
+!db/sql/woodytoys.sql  # On force Git à garder ton script d'initialisation
+
+# Certificats SSL
+web/certificate/
+bind/zones/managed-keys.bind
+
+# --- Node / React (CRUCIAL) ---
+node_modules/
+dist/
+.eslintcache
+
+# --- Docker ---
+.docker/

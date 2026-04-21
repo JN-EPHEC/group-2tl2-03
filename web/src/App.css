@@ -1,0 +1,43 @@
+/* Style de base pour l'application */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  border-bottom: 2px solid #646cff;
+  margin-bottom: 2rem;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.user-info {
+  font-size: 1.1rem;
+}
+
+.user-id {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.empty-msg {
+  font-style: italic;
+  color: #666;
+}

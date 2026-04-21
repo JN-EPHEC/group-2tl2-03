@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1773496939314" clover="3.2.0">
+  <project timestamp="1773496939314" name="All files">
+    <metrics statements="45" coveredstatements="45" conditionals="55" coveredconditionals="55" methods="3" coveredmethods="3" elements="103" coveredelements="103" complexity="0" loc="45" ncloc="45" packages="1" files="3" classes="3"/>
+    <file name="password.ts" path="C:\Users\neoca\OneDrive - EPHEC asbl\cours B2\dev3\dev3-backend-tp1\server\src\utils\password.ts">
+      <metrics statements="16" coveredstatements="16" conditionals="25" coveredconditionals="25" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="4" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="7" type="stmt"/>
+      <line num="7" count="7" type="stmt"/>
+      <line num="8" count="7" type="stmt"/>
+      <line num="9" count="7" type="stmt"/>
+      <line num="11" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="17" count="3" type="cond" truecount="5" falsecount="0"/>
+      <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="2" type="cond" truecount="4" falsecount="0"/>
+      <line num="24" count="2" type="stmt"/>
+    </file>
+    <file name="shipping.ts" path="C:\Users\neoca\OneDrive - EPHEC asbl\cours B2\dev3\dev3-backend-tp1\server\src\utils\shipping.ts">
+      <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="50" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="51" count="1" type="stmt"/>
+      <line num="54" count="15" type="cond" truecount="4" falsecount="0"/>
+      <line num="55" count="3" type="stmt"/>
+      <line num="59" count="12" type="stmt"/>
+      <line num="61" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="62" count="7" type="stmt"/>
+      <line num="63" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="64" count="3" type="stmt"/>
+      <line num="66" count="2" type="stmt"/>
+      <line num="70" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="71" count="5" type="stmt"/>
+      <line num="75" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="76" count="3" type="stmt"/>
+      <line num="79" count="12" type="stmt"/>
+    </file>
+    <file name="userValidator.ts" path="C:\Users\neoca\OneDrive - EPHEC asbl\cours B2\dev3\dev3-backend-tp1\server\src\utils\userValidator.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="8" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="12" count="6" type="stmt"/>
+      <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="20" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>
