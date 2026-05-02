@@ -1,47 +1,46 @@
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
 export class AuthService {
-  // puissance du hachage (10)
-  private static saltRounds = 10;
-
-  /**
-   * Logique d'inscription : Hachage + Création en DB
-   */
+  // Méthode d'inscription
   static async registerUser(userData: any) {
-    const { username, email, password, nom, prenom } = userData;
-
-    // 1. Hachage du mot de passe
-    const hashedPassword = await bcrypt.hash(password, this.saltRounds);
-
-    // 2. Création de l'utilisateur dans la base Supabase
-    return await User.create({
-      username,
-      email,
-      password: hashedPassword, 
-      nom,
-      prenom
+    const hashedPassword = await bcrypt.hash(userData.password, 10);
+    const newUser = await User.create({
+      ...userData,
+      password: hashedPassword,
     });
+    return newUser.get({ plain: true });
   }
 
-  /**
-   * Logique de connexion : Vérification de l'email et du mot de passe
-   */
-  static async loginUser(email: string, password: string) {
-    
-    const user = await User.findOne({ where: { email } });
+  // Méthode de connexion
+  static async loginUser(email: string, pass: string) {
+    const userInstance = await User.findOne({ where: { email } });
 
-    if (!user) {
-      throw new Error('Utilisateur non trouvé');
+    if (!userInstance) {
+      throw new Error("Identifiants incorrects");
     }
 
-    
-    const isMatch = await bcrypt.compare(password, user.password);
+    const userData = userInstance.get({ plain: true });
 
+    if (!userData.password) {
+      throw new Error("Erreur interne : mot de passe absent en base.");
+    }
+
+    const isMatch = await bcrypt.compare(pass, userData.password);
     if (!isMatch) {
-      throw new Error('Mot de passe incorrect');
+      throw new Error("Identifiants incorrects");
     }
 
-    return user;
+    const token = jwt.sign(
+      { id: userData.id, email: userData.email },
+      process.env.JWT_ACCESS_SECRET as string,
+      { expiresIn: '2h' }
+    );
+
+    return { 
+      user: { id: userData.id, username: userData.username }, 
+      token 
+    };
   }
 }
