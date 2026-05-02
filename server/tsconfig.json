@@ -11,6 +11,6 @@
     "allowImportingTsExtensions": false,
     "strict": false 
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "../web/src/services/api.js"],
   "exclude": ["src/tests/**/*", "**/*.test.ts"]
 }

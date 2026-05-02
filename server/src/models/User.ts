@@ -6,6 +6,8 @@ class User extends Model {
   public username!: string;
   public email!: string;
   public password!: string;
+  public nom?: string;    
+  public prenom?: string;
 }
 
 User.init(
