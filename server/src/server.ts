@@ -10,6 +10,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from './routes/authRoutes.js';
 import { jwtAuth } from './middlewares/jwtAuth.js';
+import quizzRoutes from './routes/quizzRoutes.js';
 
 const app = express();
 const PORT = 3000;
@@ -38,6 +39,7 @@ app.get('/api-docs/swagger.json', (req, res) => {
 
 // --- Routes API ---
 app.use('/api/auth', authRoutes);
+app.use('/api/quizz', quizzRoutes);
 
 
 app.get('/api/profile', jwtAuth, (req: any, res) => {

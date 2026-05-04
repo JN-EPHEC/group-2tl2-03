@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import { login } from "../services/api";
+import { useNavigate } from "react-router-dom"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
     const data = await login(email, password);
 
     if (data.token) {
-      
       localStorage.setItem("token", data.token);
-      alert("Connexion réussie ! Bienvenue, Neo.");
-      
-      
+      navigate("/quizz"); 
     } else {
-      
       alert("Erreur : " + (data.message || "Identifiants invalides"));
     }
   };
