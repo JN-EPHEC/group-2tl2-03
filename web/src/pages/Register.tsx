@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { register } from "../services/api";
+import "../App.css"
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const Register = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '20px auto' }}>
+    <div className="auth-card">
       <h2>Créer un compte</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         <input 

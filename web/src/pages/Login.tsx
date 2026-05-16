@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { login } from "../services/api";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+import "../App.css" 
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '20px auto' }}>
+    <div className="auth-card">
       <h2>Connexion</h2>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         <input 
